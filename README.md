@@ -1,2 +1,2 @@
-# 2020-1-CECD01-SupremeTeam
+# 2020-1-CECD01-SupremeTeam-5
 2020년도 1학기 컴퓨터종합설계01 02분반 슈프림팀
