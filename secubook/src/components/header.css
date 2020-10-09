@@ -1,0 +1,18 @@
+.logo{
+    height: 30%;
+    width: 30%;
+    margin-right: 10%;
+}
+
+.nav-item{
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.navbar-collapse{
+    margin-left: 10%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
