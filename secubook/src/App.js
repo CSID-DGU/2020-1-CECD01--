@@ -8,6 +8,8 @@ import Learn from './Learn/learn.js';
 import Level from './Level/level.js';
 import Problem from './Problem/problem.js'
 import Talk from './Talk/talk.js';
+import Login from './User/login.js';
+import Register from './User/register.js'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/home/problem" exact component={Problem} />
         <Route path="/home/level" exact component={Level} />
         <Route path="/home/talk" exact component={Talk} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/register" exact component={Register} />
       </Switch>
     </Router>
   );

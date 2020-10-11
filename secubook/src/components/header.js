@@ -35,7 +35,12 @@ function Header() {
                     <li className="nav-item active">
                         <Link to="/home/talk" className="nav-link" >Talk</Link>
                     </li>
-
+                    <li className="right-menu">
+                        <Link to="/login" className="nav-link" >로그인</Link>
+                    </li>
+                    <li>
+                        <Link to="/register" className="nav-link" >회원가입</Link>
+                    </li>
                 </ul>
 
                 { /** <form className="form-inline my-2 my-lg-0">
@@ -44,7 +49,12 @@ function Header() {
                     <button className="btn btn-outline-success my-2 my-sm-0" type="button" onClick={signout}>Sign Out</button>
                 </form>*/}
 
+
+
+
             </div>
+
+
         </nav>
     )
 }
