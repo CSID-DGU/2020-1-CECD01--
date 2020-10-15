@@ -2,4 +2,33 @@
     position: relatvie;
     padding-top: 80px;
     text-align: center;
+    margin-bottom: 10%;
+}
+
+.level_explain{
+    width: 95%;
+    height: 150px;
+    background-color: lightgray;
+    display:inline-block;
+    margin-bottom: 5%;
+}
+
+.level{
+    width: 80%;
+    height: 200px;
+    margin-left: 10%;
+    padding: 3%;
+}
+
+.level_name{
+    text-align: left;
+}
+
+.level_detail{
+    text-align: left;
+}
+
+hr{
+    margin-left: 10%;
+    margin-right: 10%;
 }

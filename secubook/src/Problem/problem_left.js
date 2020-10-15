@@ -17,7 +17,7 @@ class Problem_left extends Component {
         }
         else {
             category[e.target.id] = true;
-        }
+        } 
         alert(category);
     }
 
