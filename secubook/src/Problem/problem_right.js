@@ -5,6 +5,7 @@ import './problem.css'
 
 class Problem_right extends Component {
 
+    //난이도 추가
     render() {
         return (
             <div>

@@ -12,7 +12,6 @@ class Problem extends Component {
         return (
             <div>
                 <Header />
-
                 <div className="connection-wrap">
 
                     <div className="problem_expalin">Problem 메뉴에 대한 설명</div>

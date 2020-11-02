@@ -1,0 +1,27 @@
+.connection-wrap{
+    position: relatvie;
+    text-align: center;
+}
+
+.code_left{
+    text-align: left;
+    padding: 5%;
+    width: 40%;
+    float: left;
+}
+
+.code_right{
+    width: 40%;
+    float: left;
+    text-align: left;
+    padding: 5%;
+}
+
+.code_block{
+    columns: "30% 70%";
+    border: 0;
+}
+
+.left{
+    scroll-behavior: auto;
+}
