@@ -5,13 +5,19 @@ import './problem.css'
 
 class Problem_right extends Component {
 
+    move = (e) => {
+
+      
+
+        document.location.href="/problem/content"
+    }
     //난이도 추가
     render() {
         return (
             <div>
                 <div class="row">
 
-                    <div className="box">
+                    <div className="box" onClick={this.move}>
                         <b className="bold">
                             <div className="problem_num">1234</div>
                             <div className="problem_name">문제 이름</div>

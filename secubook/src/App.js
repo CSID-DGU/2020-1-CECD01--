@@ -13,6 +13,7 @@ import Register from './User/register.js'
 import Code from './Code/code.js'
 import Header from './components/header.js'
 import Learn_Content from './Learn/learn_content.js'
+import ProblemDetail from './Problem/ProblemDetail/problemDetail.js'
 
 class App extends Component {
 
@@ -31,7 +32,7 @@ class App extends Component {
             <Route path="/register" exact component={Register} />
             <Route path="/code" exact component={Code} />
             <Route path="/learn_content" exact component={Learn_Content} />
-
+            <Route path="/problem/content" exact component={ProblemDetail}/>
           </Switch>
         </Router>
       </div>

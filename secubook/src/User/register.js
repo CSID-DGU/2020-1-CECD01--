@@ -49,9 +49,6 @@ class Register extends Component {
                     //document.location.href = "/login";
                 })
                 .catch(error => {
-                    if (error.response.status === 409) {
-                        alert("이미 있는 아이디입니다.")
-                    }
                     console.log('error : ', error.response);
                 });
         }
