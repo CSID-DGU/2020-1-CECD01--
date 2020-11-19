@@ -17,7 +17,7 @@ class Problem_left extends Component {
         }
         else {
             category[e.target.id] = true;
-        } 
+        }
         alert(category);
     }
 
@@ -36,16 +36,16 @@ class Problem_left extends Component {
         return (
             <div className="left">
                 <div>
-                    <b>양시연</b>님<br></br><br></br>
+                    <b>이승민</b>님<br></br><br></br>
                     <div className="left_left">
                         순위 <br></br>
-                    획득한 점수 <br></br>
                     해결한 문제 수 <br></br>
+                    획득한 점수 <br></br>
                         <hr></hr>
                     </div>
                     <div className="left_right">
-                        100 <br></br>
-                    100 <br></br>
+                        10 <br></br>
+                    50 <br></br>
                     100 <br></br>
                         <hr></hr>
                     </div>

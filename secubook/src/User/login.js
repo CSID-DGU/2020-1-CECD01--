@@ -8,6 +8,7 @@ class Login extends Component {
     state = {
         password: '',
         id: '',
+        token: ''
     };
 
     confirm = (e) => {
@@ -20,38 +21,33 @@ class Login extends Component {
                 function (response) {
                     console.log(response.headers['set-cookie'])
                     //document.location.href = "/"
-
+    
                 }
             );
-*/
-        axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password },
-            { withCredentials: true })
-            .then(
-                function (response) {
-                    console.log(response.cookie);
-                    const expires = new Date()
-                    expires.setDate(Date.now() + 1000 * 60 * 60 * 24 * 14)
-                    cookie.save(
-                        'userId',
-                        '1234',
-                        {
-                            path: '/',
-                            expires,
-                            //httpOnly: true
-                        }
-                    )
-                    // console.log(response.Cookies.data);
+    */
+        //axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
+        axios.post('http://localhost:8001/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
+        )
+            .then(function (response) {
+                alert("확인");
 
-
-                })
-            .then(
-                cookie.get('user')
-            )
+                console.log(response);
+                document.location.href = "/";
+            })
+            .then(function (response) {
+                cookie.save("ha", "ha");
+            })
+            .then(function (response) {
+                alert(cookie.load("ha"));
+            })
+            .then(function (response) {
+                alert(cookie.load("connect.sid"));
+            })
             .catch(error => {
                 alert("error")
                 console.log('error : ', error.response)
 
-                document.location.href = "/login";
+                //document.location.href = "/login";
             });
 
     }

@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import './learn.css';
+import './level_content.css'
 import Header from '../components/header.js'
-import Arrow from '../assets/play.svg'
 
-class Learn_Problem extends Component {
+class LevelContent extends Component {
 
     render() {
         return (
             <div>
                 <Header />
-                <div className="connection-wrap-content">
+
+                <div className="connection-wrap">
+
+                    <div onClick={this.move} className="goProblem">문제 채점하기</div>
+                    <br></br>
                     <div className="problem">
                         <div className="problem_title">1. 데이터베이스(DB)와 연동된 웹 응용프로그램에서 입력된 데이터에 대한 유효성 검증을 하지 않을 경우, <br></br>
                         공격자가 입력 폼 및 URL 입력란에 SQL 문을 삽입하여 DB로부터 정보를 열람하거나 조작할 수 있는 보안취약점은 무엇인가요?</div>
@@ -41,14 +44,28 @@ class Learn_Problem extends Component {
                         </div>
                     </div>
 
-                    <button className="problem_button">제출하기</button>
-                </div>
+                    <div className="problem">
+                        <div className="problem_title">4. 데이터베이스(DB)와 연동된 웹 응용프로그램에서 입력된 데이터에 대한 유효성 검증을 하지 않을 경우, <br></br>
+                        공격자가 입력 폼 및 URL 입력란에 SQL 문을 삽입하여 DB로부터 정보를 열람하거나 조작할 수 있는 보안취약점은 무엇인가요?</div>
+                        <br></br>
+                        <div>
+                            <input type="text" /><br></br>
+                        </div>
+                    </div>
 
-
+                    <div className="problem">
+                        <div className="problem_title">5. 데이터베이스(DB)와 연동된 웹 응용프로그램에서 입력된 데이터에 대한 유효성 검증을 하지 않을 경우, <br></br>
+                        공격자가 입력 폼 및 URL 입력란에 SQL 문을 삽입하여 DB로부터 정보를 열람하거나 조작할 수 있는 보안취약점은 무엇인가요?</div>
+                        <br></br>
+                        <div>
+                            <input type="text" /><br></br>
+                        </div>
+                    </div>
+                </div >
             </div >
         )
     }
 
 }
 
-export default Learn_Problem;
+export default LevelContent;
