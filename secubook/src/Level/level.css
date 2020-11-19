@@ -10,12 +10,13 @@
     height: 150px;
     background-color: lightgray;
     display:inline-block;
-    margin-bottom: 5%;
+    padding: 2%;
+    margin-bottom: 2%;
 }
 
 .level{
     width: 80%;
-    height: 200px;
+    height: 170px;
     margin-left: 10%;
     padding: 3%;
 }
@@ -33,3 +34,7 @@ hr{
     margin-right: 10%;
 }
 
+.level_detail{
+    color: gray;
+    font-size: medium;
+}

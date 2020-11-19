@@ -9,10 +9,12 @@
     padding-top: 10%;
     text-align: left;
     padding-left: 10%;
+    padding-bottom: 10%;
 }
 
 .learn_explain{
     width: 95%;
+    padding: 2%;
     height: 150px;
     background-color: lightgray;
     display:inline-block;
@@ -45,10 +47,9 @@
 }
 
 img{
-    width: 3%;
-    height: 3%;
-    float: right;
-    margin-right: 5%;
+    width: 40%;
+    float: center;
+    text-align: center;
 }
 
 .learn_block{
@@ -66,4 +67,75 @@ img{
     font-size: larger;
     margin-bottom: 3%;
     text-align: left;
+}
+
+.content{
+    font-size: large;
+}
+
+.color{
+    color: red;
+    font-weight: bol;
+}
+
+.name{
+    text-align: left;
+    width: 80%;
+    font-size: x-large;
+    font-weight: bold;
+    float: left;
+}
+
+.goProblem{
+    text-align: center;
+    width: 10%;
+    margin-right: 10%;
+    float: left;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+}
+
+.problem{
+    width: 90%;
+    margin-bottom: 5%;
+    padding: 1%;
+}
+
+.problem_title{
+
+    font-weight: bold;
+}
+
+.problem_button{
+    margin-left: 40%;
+    width: 10%;
+    border: 0cm;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+
+}
+
+.learn_{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: left;
+    
+}
+
+.learn_button{
+    margin-top: 5%;
+    margin-left: 45%;
+}
+
+.error{
+    color: red;
+}
+
+.learn_image_big{
+    width: 70%;
 }

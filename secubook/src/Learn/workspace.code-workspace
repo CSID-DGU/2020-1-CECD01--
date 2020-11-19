@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "../../../../secubook_backend/server"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}
