@@ -16,9 +16,9 @@ class Register extends Component {
     }
 
     handleChange = (e) => {
-        //alert(this.setState.checked + ', ' + this.state.password + ', ' + this.state.passwordConfirrm);
         this.setState({ [e.target.name]: e.target.value });
     };
+
 
     confirm = (e) => {
 
@@ -43,12 +43,16 @@ class Register extends Component {
             e.preventDefault();
         }
         else {
-            axios.post('http://3.35.220.252/auth/join', { name: this.state.name, email: this.state.id, password: this.state.password }, { 'Content-Type': "application/x-www-form-urlencoded" })
+            axios.post('http://localhost:8001/auth/join', { name: this.state.name, email: this.state.id, password: this.state.password }, { 'Content-Type': "application/x-www-form-urlencoded" })
                 .then(function (response) {
+                    alert("확인");
                     console.log(response);
-                    //document.location.href = "/login";
+                    document.location.href = "/login";
                 })
                 .catch(error => {
+                    //if (error.response.status === 409) {
+                    //alert("이미 있는 아이디입니다.")
+                    //}
                     console.log('error : ', error.response);
                 });
         }
@@ -71,7 +75,7 @@ class Register extends Component {
 
                     <p> OR  </p>
                     <input type="text" id="inputName" name="name" value={this.state.name} onChange={this.handleChange} className="form-control" placeholder="이름" required="" autoFcus="" />
-                    <input type="id" id="inputId" name="id" value={this.state.id} onChange={this.handleChange} className="form-control" placeholder="아이디" required="" autofocus="" />
+                    <input type="id" id="inputId" name="id" value={this.state.id} onChange={this.handleChange} className="form-control" placeholder="아이디" required="" />
                     <input type="password" id="inputPassword" name="password" value={this.state.password} onChange={this.handleChange} className="form-control" placeholder="Password" required="" />
                     <input type="password" id="inputPassword" name="passwordConfirrm" value={this.state.passwordConfirrm} onChange={this.handleChange} className="form-control" placeholder="Password 확인" required="" />
 

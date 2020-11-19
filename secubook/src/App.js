@@ -11,9 +11,11 @@ import Talk from './Talk/talk.js';
 import Login from './User/login.js';
 import Register from './User/register.js'
 import Code from './Code/code.js'
-import Header from './components/header.js'
 import Learn_Content from './Learn/learn_content.js'
 import ProblemDetail from './Problem/ProblemDetail/problemDetail.js'
+import Learn_Problem from './Learn/learn_problem.js'
+import MyPage from './User/myPage.js'
+import Level_Content from './Level/level_content.js'
 import Learn_0 from './Learn/0.js'
 import Learn_1 from './Learn/1.js'
 import Learn_2 from './Learn/2.js'
@@ -46,6 +48,9 @@ class App extends Component {
             <Route path="/code" exact component={Code} />
             <Route path="/learn_content" exact component={Learn_Content} />
             <Route path="/problem/content" exact component={ProblemDetail}/>
+            <Route path="/learn_problem" exact component={Learn_Problem} />
+            <Route path="/mypage" exact component={MyPage} />
+            <Route path="/level_content" exact component={Level_Content} />
             <Route path="/learn_0" exact component={Learn_0} />
             <Route path="/learn_1" exact component={Learn_1} />
             <Route path="/learn_2" exact component={Learn_2} />
