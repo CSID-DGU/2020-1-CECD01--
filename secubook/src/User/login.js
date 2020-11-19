@@ -24,30 +24,17 @@ class Login extends Component {
                 }
             );
 */
-        axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password },
+        axios.post('http://localhost:8001/auth/login', { email: this.state.id, password: this.state.password },
             { withCredentials: true })
             .then(
                 function (response) {
-                    console.log(response.cookie);
-                    const expires = new Date()
-                    expires.setDate(Date.now() + 1000 * 60 * 60 * 24 * 14)
-                    cookie.save(
-                        'userId',
-                        '1234',
-                        {
-                            path: '/',
-                            expires,
-                            //httpOnly: true
-                        }
-                    )
+                    
                     // console.log(response.Cookies.data);
 
 
                 })
-            .then(
-                cookie.get('user')
-            )
             .catch(error => {
+            
                 alert("error")
                 console.log('error : ', error.response)
 

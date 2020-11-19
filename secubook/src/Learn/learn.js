@@ -16,7 +16,7 @@ class Learn extends Component {
         this.state.id = e.target.id;
         this.state.name = e.target.name;
 
-        axios.get('http://3.35.220.252/learn/', {
+        axios.get('http://localhost:8001/learn', {
             params: {
                 category: this.state.id,
                 title: this.state.name

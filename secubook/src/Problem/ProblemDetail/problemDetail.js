@@ -63,8 +63,8 @@ class ProblemDetail extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.get}>get</button>
-                <button onClick={this.post}>post</button>
+                {/* <button onClick={this.get}>get</button>
+                <button onClick={this.post}>post</button> */}
                 <div className="top-wrap">
                     <div className="logo"> 로고 </div>
                     <text className="top-category-text">  문제 풀이 > {this.state.category} >  </text>
