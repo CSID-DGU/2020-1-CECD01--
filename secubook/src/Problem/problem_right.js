@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import './problem.css'
 import axios from 'axios';
+import cookie from 'react-cookies';
 
 class Problem_right extends Component {
     state = {
@@ -26,12 +27,26 @@ class Problem_right extends Component {
             })
     }
 
+    move = (e) => {
+        alert(e.target.id);
+        axios.get("http://localhost:8001/problem/" + e.target.id, { withCredentials: true, })
+            .then((resp) => {
+                alert(resp.data.results.content)
+                cookie.save("content", resp.data.results.content);
+                cookie.save("image", resp.data.results.image);
+                document.location.href = "/code"
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+
     //난이도 추가
     render() {
         const listList = this.state.list.map(
 
             (list) => (
-                <div className="box">
+                <div className="box" onClick={this.move} id={list.id}>
                     <b className="bold">
                         <div className="problem_num">{list.id}</div>
                         <div className="problem_name">{list.title}</div>

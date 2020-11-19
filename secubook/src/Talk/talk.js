@@ -8,7 +8,12 @@ import Pagination from 'react-bootstrap/Pagination'
 class Talk extends Component {
 
     state = {
-        list: []
+        list: [],
+        index: ''
+    }
+
+    write = (e) => {
+        document.location.href = "/write";
     }
 
     componentDidMount() {
@@ -28,33 +33,31 @@ class Talk extends Component {
             })
     }
 
-
     move = (e) => {
-        alert(e.target.id);
+        alert(1)
     }
 
     render() {
         let items = [];
-
-        var count = 0
+        var count = 0;
         const talkList = this.state.list.map(
 
             (talk) => (
-                <tbody id={count++} onClick={this.move}>
+                <tbody onClick={this.move} name={count++}>
                     <td>{talk.id}</td>
                     <td>{talk.title}</td>
                     <td>{talk.name}</td>
                     <td>{talk.date}</td>
                 </tbody>
-
             )
         );
 
         return (
             <div>
                 <Header />
-
                 <div className="connection-wrap text-center">
+
+
                     <table className="table table-hover">
                         <thead>
                             <tr>
@@ -66,57 +69,9 @@ class Talk extends Component {
                         </thead>
 
                         {talkList}
-                        {/** <tbody>
-                            <td>147</td>
-                            <td>1000번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>
-
-                        <tbody>
-                            <td>146</td>
-                            <td>1000번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>
-
-                        <tbody>
-                            <td>145</td>
-                            <td>1001번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>
-
-                        <tbody>
-                            <td>144</td>
-                            <td>1022번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>
-
-                        <tbody>
-                            <td>143</td>
-                            <td>1022번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>
-
-                        <tbody>
-                            <td>142</td>
-                            <td>1022번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>
-
-                        <tbody>
-                            <td>141</td>
-                            <td>1022번 질문 있습니다.</td>
-                            <td>이승민</td>
-                            <td>2020.11.06</td>
-                        </tbody>*/}
 
                     </table>
-
+                    <button className="talk_button" onClick={this.write}>글쓰기</button>
                     <Pagination>{items}</Pagination>
                 </div>
             </div>

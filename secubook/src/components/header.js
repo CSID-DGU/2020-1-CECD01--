@@ -5,6 +5,8 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './header.css'
 
+import cookie from 'react-cookies';
+
 class Header extends Component {
 
     state = {
@@ -16,6 +18,7 @@ class Header extends Component {
         //axios.get("http://3.35.220.252/")
         axios.get("http://localhost:8001/", { withCredentials: true, })
             .then((resp) => {
+                cookie.save("user", resp.data.user.name);
                 this.state.response = resp.data.user;
                 //console.log(this.state.response.name);
                 //console.log(this.state.response);
@@ -30,7 +33,8 @@ class Header extends Component {
         axios.get("http://localhost:8001/auth/logout", { withCredentials: true, })
             .then((resp) => {
                 //console.log(resp.data);
-                this.state.is = 0;
+                cookie.save("user", "");
+                document.location = "/"
             }
             ).catch((err) => {
                 console.log(err)
@@ -47,7 +51,7 @@ class Header extends Component {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarsExampleDefault">
-                    {(this.state.response !== 0) ? (<ul className="navbar-nav mr-auto">
+                    {(cookie.load("user") === "") ? (<ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
                             <Link to="/" className="nav-link" >Learn</Link>
                         </li>
@@ -82,7 +86,7 @@ class Header extends Component {
                         </li>
 
                         <li className="right-menu">
-                            <Link to="/mypage" className="nav-link" > {this.state.response.name} 님</Link>
+                            <Link to="/mypage" className="nav-link" > {cookie.load("user")} 님</Link>
                         </li>
                         <li>
                             <div onClick={this.logout} className="nav-link" >로그아웃</div>

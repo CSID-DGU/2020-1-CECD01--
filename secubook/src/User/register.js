@@ -63,17 +63,7 @@ class Register extends Component {
             <div id="logreg-forms">
                 <div>
                     <h1 className="h3 mb-3 font-weight-normal"><b>회원가입</b></h1>
-                    <div className="social-login">
-                        <div><button className="btn facebook-btn social-btn" type="button"><span><i className="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
-                        </div>
 
-                        <div>
-                            <button className="btn google-btn social-btn" type="button"><span><i className="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
-
-                        </div>
-                    </div>
-
-                    <p> OR  </p>
                     <input type="text" id="inputName" name="name" value={this.state.name} onChange={this.handleChange} className="form-control" placeholder="이름" required="" autoFcus="" />
                     <input type="id" id="inputId" name="id" value={this.state.id} onChange={this.handleChange} className="form-control" placeholder="아이디" required="" />
                     <input type="password" id="inputPassword" name="password" value={this.state.password} onChange={this.handleChange} className="form-control" placeholder="Password" required="" />

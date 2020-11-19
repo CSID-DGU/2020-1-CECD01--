@@ -11,6 +11,7 @@ class Code extends Component {
     render() {
         return (
             <div>
+                <Header />
                 <div className="connection-wrap">
                     <div className="code_block">
                         <div className="code_left"><Left /></div>

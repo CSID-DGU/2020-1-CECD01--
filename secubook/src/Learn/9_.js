@@ -6,7 +6,7 @@ import Header from '../components/header.js'
 import Arrow from '../assets/play.svg'
 import axios from 'axios';
 
-class Learn_6_ extends Component {
+class Learn_9_ extends Component {
 
     state = {
         re1: '',
@@ -21,31 +21,10 @@ class Learn_6_ extends Component {
         answer3_3: ''
     };
 
-
-    componentDidMount() {
-
-        if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다." && this.state.re3 === "답이 맞았습니다.") {
-            alert(1);
-            axios.post('http://localhost:8001/learn/check', { title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
-            )
-                .then(function (response) {
-                    alert("맞았습니다");
-                    document.location.href = "/";
-                })
-                .catch(error => {
-                    alert("error")
-                    console.log('error : ', error.response)
-
-                    //document.location.href = "/login";
-                });
-
-        }
-    }
-
     submit = (e) => {
         if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다." && this.state.re3 === "답이 맞았습니다.") {
             alert(1);
-            axios.post('http://localhost:8001/learn/check', { title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
+            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
             )
                 .then(function (response) {
                     document.location.href = "/";
@@ -172,4 +151,4 @@ class Learn_6_ extends Component {
 
 }
 
-export default Learn_6_;
+export default Learn_9_;

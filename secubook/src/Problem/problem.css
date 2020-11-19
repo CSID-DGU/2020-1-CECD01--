@@ -6,6 +6,7 @@
 
 .problem_expalin{
     width: 95%;
+    margin-left: 2.5%;
     height: 150px;
     background-color: lightgray;
     display:inline-block;

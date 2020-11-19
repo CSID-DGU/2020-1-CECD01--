@@ -7,3 +7,44 @@
 .pagination{
     margin-left: 50%;
 }
+
+.talk_button{
+    margin-top: 30%;
+    margin-left: 80%;
+    width: 5%;
+    border: 0cm;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+}
+
+.write_button{
+    margin-top: 3%;
+    margin-left: 80%;
+    width: 5%;
+    border: 0cm;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+}
+
+.title_input{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.title{
+    margin-left: 15%;
+}
+
+.content{
+    margin-left: 15%;
+}
+
+.content_input{
+    margin-left: 15%;
+    width: 70%;
+    height: 300px;
+}

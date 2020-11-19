@@ -59,10 +59,10 @@ class Learn extends Component {
             document.location.href = "/learn_7"
         }
         else if (this.state.id === '크로스-사이트-스크립팅') {
-            document.location.href = "/learn_8"
+            document.location.href = "/learn_9"
         }
         else if (this.state.id === '취약한-접근-제어') {
-            document.location.href = "/learn_9"
+            document.location.href = "/learn_10"
         }
         else if (this.state.id === '보안-설정-오류') {
             document.location.href = "/learn_10"

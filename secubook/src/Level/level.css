@@ -8,6 +8,7 @@
 .level_explain{
     width: 95%;
     height: 150px;
+    margin-left: 2.5%;
     background-color: lightgray;
     display:inline-block;
     padding: 2%;

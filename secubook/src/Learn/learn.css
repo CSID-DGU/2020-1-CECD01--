@@ -14,6 +14,7 @@
 
 .learn_explain{
     width: 95%;
+    margin-left: 2.5%;
     padding: 2%;
     height: 150px;
     background-color: lightgray;
@@ -109,7 +110,7 @@ img{
 
 .problem_button{
     margin-left: 40%;
-    width: 10%;
+    width: 15%;
     border: 0cm;
     height: 40px;
     background-color: black;
@@ -129,4 +130,11 @@ img{
 .learn_button{
     margin-top: 5%;
     margin-left: 45%;
+}
+
+.error{
+    color: red;
+}
+.learn_image_big{
+    width: 70%;
 }
