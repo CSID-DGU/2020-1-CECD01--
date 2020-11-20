@@ -14,9 +14,9 @@ class Write extends Component {
     write = (e) => {
 
         //
-        axios.post('http://3.35.220.252/talk/add', { title: this.state.title, content: this.state.content }, { withCredentials: true, }
+        //axios.post('http://3.35.220.252/talk/add', { title: this.state.title, content: this.state.content }, { withCredentials: true, }
 
-            //axios.post('http://localhost:8001/talk/add', { title: this.state.title, content: this.state.content }, { withCredentials: true, }
+        axios.post('http://localhost:8001/talk/add', { title: this.state.title, content: this.state.content }, { withCredentials: true, }
         )
             .then(function (response) {
                 document.location.href = "/talk";

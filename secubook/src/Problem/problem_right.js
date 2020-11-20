@@ -14,8 +14,8 @@ class Problem_right extends Component {
     componentDidMount() {
         //
 
-        axios.get("http://3.35.220.252/problem")
-            //axios.get("http://localhost:8001/problem")
+        //axios.get("http://3.35.220.252/problem")
+        axios.get("http://localhost:8001/problem")
             .then((resp) => {
                 var temp = [];
                 for (var i = 0; i < resp.data.results.length; i++) {
@@ -40,8 +40,8 @@ class Problem_right extends Component {
         cookie.save("number", e.target.id);
         cookie.save("starttime", new Date().getTime());
 
-        axios.get("http://3.35.220.252/problem/" + e.target.id, { withCredentials: true, })
-            //axios.get("http://localhost:8001/problem/" + e.target.id, { withCredentials: true, })
+        //axios.get("http://3.35.220.252/problem/" + e.target.id, { withCredentials: true, })
+        axios.get("http://localhost:8001/problem/" + e.target.id, { withCredentials: true, })
             .then((resp) => {
                 alert(resp.data.results.content)
 
@@ -68,8 +68,8 @@ class Problem_right extends Component {
                     </b>
                     <br></br>
                     <div>
-                        <div className="problem_solve">{list.cntOfSolve}</div>
-                        <div className="problem_percentage">정답률 </div>
+                        <div className="problem_solve">정답자 수 : {list.cntOfSolve}</div>
+                        <div className="problem_percentage">제출한 사람 수 : {list.cntOfRun} </div>
                     </div>
                 </div>
             )

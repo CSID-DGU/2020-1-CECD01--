@@ -11,26 +11,12 @@ class Login extends Component {
     };
 
     confirm = (e) => {
-
-        /*
-        return axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password }, {
-            withCredentials: true,
-        })
-            .then(
-                function (response) {
-                    console.log(response.headers['set-cookie'])
-                    //document.location.href = "/"
-    
-                }
-            );
-    */
-        axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
-            //axios.post('http://localhost:8001/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
+        // axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
+        axios.post('http://localhost:8001/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
         )
             .then(function (response) {
                 alert("확인");
-                cookie.save("user", response.data.user.name);
-                console.log(response);
+                cookie.save("user", response.data.user);
                 document.location.href = "/";
             })
 

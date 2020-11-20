@@ -13,8 +13,8 @@ class Learn extends Component {
 
     componentDidMount() {
 
-        axios.get("http://3.35.220.252/learn")
-            //axios.get("http://localhost:8001/learn")
+        //axios.get("http://3.35.220.252/learn")
+        axios.get("http://localhost:8001/learn")
             .then((resp) => {
                 console.log(resp.data.results.length)
                 var temp1 = [];

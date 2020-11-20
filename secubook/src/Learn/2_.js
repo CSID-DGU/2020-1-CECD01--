@@ -19,19 +19,23 @@ class Learn_2_ extends Component {
     };
 
     submit = (e) => {
+        alert(1);
         if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다.") {
-            axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "크웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
+            alert(1);
+            //axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
 
-                //axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "크웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
+            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
             )
                 .then(function (response) {
-                    document.location.href = "/";
+                    document.location.href = "/level";
                 })
                 .catch(error => {
                     console.log('error : ', error.response)
 
                     //document.location.href = "/login";
                 });
+
+
 
         }
         else {
