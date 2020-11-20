@@ -20,7 +20,7 @@ class Problem extends Component {
                 <Header />
                 <div className="connection-wrap">
 
-                    <div className="problem_expalin">
+                    <div className="problem_explain">
                         <b>Problem</b>
                         <br></br><br></br>
                         문제를 통해 시큐어 코딩 실력을 향상시켜보세요.

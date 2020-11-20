@@ -3,12 +3,12 @@
     padding-top: 80px;
     text-align: center;
     margin-bottom: 10%;
+    padding-left: 5%;
 }
 
 .level_explain{
-    width: 95%;
+    width: 100%;
     height: 150px;
-    margin-left: 2.5%;
     background-color: lightgray;
     display:inline-block;
     padding: 2%;
@@ -18,7 +18,7 @@
 .level{
     width: 80%;
     height: 170px;
-    margin-left: 10%;
+    margin-left: 5%;
     padding: 3%;
 }
 
@@ -38,4 +38,119 @@ hr{
 .level_detail{
     color: gray;
     font-size: medium;
+}
+
+.connection-wrap{
+    position: relatvie;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.problem{
+margin-left: 5%;
+}
+
+.problem_expalin{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 150px;
+    background-color: lightgray;
+    display:inline-block;
+    padding: 2%;
+}
+
+.problem_left{
+    text-align: left;
+    padding: 5%;
+    width: 30%;
+    float: left;
+}
+
+.problem_right{
+    width: 70%;
+    float: left;
+    text-align: left;
+    padding: 5%;
+}
+
+.problem_block{
+    width: 100%;
+    height: 100%;
+}
+
+.left_left{
+    text-align: left;
+    width: 50%;
+    float: left;
+}
+
+.left_right{
+    text-align: right;
+    width: 50%;
+    float: left;
+}
+
+.left{
+    scroll-behavior: auto;
+}
+
+.left_category div{
+    margin-bottom: 10px;
+}
+
+.one{
+    background-color: red;
+}
+
+.two{
+    background-color: black;
+}
+
+.box{
+    width: 40%;
+    height: 140px;
+    padding: 3%;
+    background-color: lightblue;
+    margin: 5%;
+}
+
+.problem_num{
+    float: left;
+    width: 10%;
+}
+.problem_name{
+    float: left;
+    margin-left: 10%;
+    width: 70%;
+}
+
+.problem_solve{
+    text-align: right;
+    float: left;
+}
+
+.bold::after{
+    content: ''; 
+    display: table;
+    clear: both
+}
+
+
+.problem_percentage{
+    float: left;
+    margin-left: 5%;
+}
+
+.goProblem{
+    width: 10%;
+    margin-right: 10%;
+    float: left;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    border-radius: 12px;
+
+    margin-left: 40%;
+    border: 0cm;
+    height: 40px;
 }

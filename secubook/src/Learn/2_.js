@@ -76,7 +76,6 @@ class Learn_2_ extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <div className="connection-wrap-content">
 
                     <div onClick={this.submit} className="goProblem">목록보기</div>

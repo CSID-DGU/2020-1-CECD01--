@@ -51,6 +51,7 @@ class Level extends Component {
         axios.post('http://localhost:8001/level/test', { level: 3 }, { withCredentials: true, }
         )
             .then(function (response) {
+
                 if (response.data.result !== "이수 조건을 만족하지 못해 진행할 수 없습니다.") {
                     document.location.href = "/level3";
                 }

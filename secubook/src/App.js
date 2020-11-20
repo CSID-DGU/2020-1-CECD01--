@@ -8,6 +8,7 @@ import Learn from './Learn/learn.js';
 import Level from './Level/level.js';
 import Problem from './Problem/problem.js'
 import Talk from './Talk/talk.js';
+import Talk_ from './Talk/talk_.js'
 import Login from './User/login.js';
 import Register from './User/register.js'
 import Code from './Code/code.js'
@@ -30,6 +31,7 @@ import Learn_11 from './Learn/11.js'
 import Learn_9_ from './Learn/9_.js'
 import Learn_2_ from './Learn/2_.js'
 import Write from './Talk/write.js'
+import Level1 from './Level/level1.js'
 
 class App extends Component {
 
@@ -66,6 +68,8 @@ class App extends Component {
             <Route path="/learn_9_" exact component={Learn_9_} />
             <Route path="/learn_2_" exact component={Learn_2_} />
             <Route path="/write" exact component={Write} />
+            <Route path="/level1" exact component={Level1} />
+            <Route path="/talk_" exact component={Talk_} />
           </Switch>
         </Router>
       </div>

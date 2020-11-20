@@ -13,8 +13,7 @@
 }
 
 .learn_explain{
-    width: 95%;
-    margin-left: 2.5%;
+    width: 100%;
     padding: 2%;
     height: 150px;
     background-color: lightgray;
@@ -59,8 +58,8 @@ img{
 }
 
 .block{
-    margin: 5%;
-    width: 90%;
+    margin-top: 5%;
+    width: 100%;
 }
 
 .block_name{
@@ -88,13 +87,17 @@ img{
 }
 
 .goProblem{
-    text-align: center;
     width: 10%;
     margin-right: 10%;
     float: left;
     background-color: black;
     color: white;
+    padding-top: 5px;
     border-radius: 12px;
+
+    margin-left: 40%;
+    border: 0cm;
+    height: 40px;
 }
 
 .problem{

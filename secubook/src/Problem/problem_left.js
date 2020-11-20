@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './problem.css'
+import cookie from 'react-cookies';
 
 class Problem_left extends Component {
 
@@ -36,7 +37,7 @@ class Problem_left extends Component {
         return (
             <div className="left">
                 <div>
-                    <b>이승민</b>님<br></br><br></br>
+                    <b>{cookie.load("user")}</b>님<br></br><br></br>
                     <div className="left_left">
                         순위 <br></br>
                     해결한 문제 수 <br></br>
@@ -66,6 +67,7 @@ class Problem_left extends Component {
                     <div id="1" onClick={this.handleLevel}>Level 2</div>
                     <div id="2" onClick={this.handleLevel}>Level 3</div>
                 </div>
+
             </div>
 
         )

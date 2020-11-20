@@ -15,15 +15,21 @@ class Learn extends Component {
         axios.get("http://localhost:8001/learn")
             .then((resp) => {
                 console.log(resp.data.results.length)
+                var temp1 = [];
+                var temp2 = [];
                 for (var i = 0; i < resp.data.results.length; i++) {
                     if (resp.data.results[i].category === 0) {
-                        this.state.list1.push({ title: resp.data.results[i].title });
+                        temp1.push({ title: resp.data.results[i].title });
                     }
                     else {
-                        this.state.list2.push({ title: resp.data.results[i].title });
+                        temp2.push({ title: resp.data.results[i].title });
                     }
 
                 }
+                this.setState({
+                    list1: temp1,
+                    list2: temp2
+                });
             })
             .catch((err) => {
                 console.log(err)
@@ -75,6 +81,7 @@ class Learn extends Component {
     }
 
     render() {
+
 
         const list1List = this.state.list1.map(
 

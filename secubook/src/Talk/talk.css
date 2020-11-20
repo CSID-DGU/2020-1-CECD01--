@@ -1,5 +1,6 @@
 .connection-wrap{
     position: relatvie;
+    margin-right: 5%;
     padding-top: 80px;
     text-align: center;
 }
@@ -47,4 +48,24 @@
     margin-left: 15%;
     width: 70%;
     height: 300px;
+}
+
+.talk_content{
+    background-color: black;
+}
+
+.comment_content{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.content_button{
+    margin-top: 3%;
+    margin-left: 40%;
+    width: 10%;
+    border: 0cm;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
 }

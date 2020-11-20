@@ -11,10 +11,11 @@
 }
 
 .code_right{
-    width: 40%;
+    width: 55%;
     float: left;
     text-align: left;
     padding: 5%;
+    
 }
 
 .code_block{
@@ -108,4 +109,16 @@
     height: 40px;
     color: white;
     align-self: flex-end;
+}
+
+.code_button{
+    margin-top: 2%;
+    margin-left: 40%;
+    width: 15%;
+    border: 0cm;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+
 }

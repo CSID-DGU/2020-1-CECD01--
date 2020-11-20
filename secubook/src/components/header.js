@@ -18,10 +18,12 @@ class Header extends Component {
         //axios.get("http://3.35.220.252/")
         axios.get("http://localhost:8001/", { withCredentials: true, })
             .then((resp) => {
-                cookie.save("user", resp.data.user.name);
+                //cookie.save("user", "");
+                //cookie.save("user", resp.data.user.name);
                 this.state.response = resp.data.user;
                 //console.log(this.state.response.name);
                 //console.log(this.state.response);
+                //document.location = "/"
             }
             ).catch((err) => {
                 console.log(err)
