@@ -24,8 +24,8 @@ class Login extends Component {
                 }
             );
     */
-        //axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
-        axios.post('http://localhost:8001/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
+        axios.post('http://3.35.220.252/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
+            //axios.post('http://localhost:8001/auth/login', { email: this.state.id, password: this.state.password }, { withCredentials: true, }
         )
             .then(function (response) {
                 alert("확인");

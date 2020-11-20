@@ -43,7 +43,10 @@ class Register extends Component {
             e.preventDefault();
         }
         else {
-            axios.post('http://localhost:8001/auth/join', { name: this.state.name, email: this.state.id, password: this.state.password }, { 'Content-Type': "application/x-www-form-urlencoded" })
+            //3.35.220.252
+
+            axios.post('http://3.35.220.252/auth/join', { name: this.state.name, email: this.state.id, password: this.state.password }, { 'Content-Type': "application/x-www-form-urlencoded" })
+                //axios.post('http://localhost:8001/auth/join', { name: this.state.name, email: this.state.id, password: this.state.password }, { 'Content-Type': "application/x-www-form-urlencoded" })
                 .then(function (response) {
                     alert("확인");
                     console.log(response);

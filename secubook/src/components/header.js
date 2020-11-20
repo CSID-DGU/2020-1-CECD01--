@@ -9,21 +9,26 @@ import cookie from 'react-cookies';
 
 class Header extends Component {
 
+
     state = {
         response: ''
     };
 
     componentDidMount() {
+        //cookie.save("user", "");
         console.log(this.state.response)
-        //axios.get("http://3.35.220.252/")
-        axios.get("http://localhost:8001/", { withCredentials: true, })
+        axios.get("http://3.35.220.252/", { withCredentials: true, })
+            //axios.get("http://localhost:8001/", { withCredentials: true, })
             .then((resp) => {
                 //cookie.save("user", "");
-                //cookie.save("user", resp.data.user.name);
+
+                if (resp.data.user == undefined) {
+                    cookie.save("user", "")
+                }
+                else {
+                    cookie.save("user", resp.data.user.name)
+                }
                 this.state.response = resp.data.user;
-                //console.log(this.state.response.name);
-                //console.log(this.state.response);
-                //document.location = "/"
             }
             ).catch((err) => {
                 console.log(err)
@@ -31,11 +36,11 @@ class Header extends Component {
     }
 
     logout = (e) => {
-        //axios.get("http://3.35.220.252/auth/logout")
-        axios.get("http://localhost:8001/auth/logout", { withCredentials: true, })
+        axios.get("http://3.35.220.252/auth/logout", { withCredentials: true, })
+            //axios.get("http://localhost:8001/auth/logout", { withCredentials: true, })
             .then((resp) => {
                 //console.log(resp.data);
-                cookie.save("user", "");
+                cookie.save("user", "")
                 document.location = "/"
             }
             ).catch((err) => {

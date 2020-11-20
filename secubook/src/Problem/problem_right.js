@@ -12,7 +12,10 @@ class Problem_right extends Component {
 
 
     componentDidMount() {
-        axios.get("http://localhost:8001/problem")
+        //
+
+        axios.get("http://3.35.220.252/problem")
+            //axios.get("http://localhost:8001/problem")
             .then((resp) => {
                 var temp = [];
                 for (var i = 0; i < resp.data.results.length; i++) {

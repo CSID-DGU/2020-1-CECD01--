@@ -30,7 +30,11 @@ class Level_1 extends Component {
 
     submit = (e) => {
         if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다.") {
-            axios.post('http://localhost:8001/learn/check', { level: "1" }, { withCredentials: true, }
+
+            //3.35.220.252
+            axios.post('http://3.35.220.252/learn/check', { level: "1" }, { withCredentials: true, }
+
+                //axios.post('http://localhost:8001/learn/check', { level: "1" }, { withCredentials: true, }
             )
                 .then(function (response) {
                     document.location.href = "/level";

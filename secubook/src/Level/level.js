@@ -8,7 +8,9 @@ import axios from 'axios';
 class Level extends Component {
 
     move1 = () => {
-        axios.post('http://localhost:8001/level/test', { level: 1 }, { withCredentials: true, }
+        axios.post('http://3.35.220.252/level/test', { level: 1 }, { withCredentials: true, }
+
+            //axios.post('http://localhost:8001/level/test', { level: 1 }, { withCredentials: true, }
         )
             .then(function (response) {
                 if (response.data.result !== "이수 조건을 만족하지 못해 진행할 수 없습니다.") {
@@ -29,7 +31,9 @@ class Level extends Component {
         //document.location.href = "/level_content"
     }
     move2 = () => {
-        axios.post('http://localhost:8001/level/test', { level: 2 }, { withCredentials: true, }
+        axios.post('http://3.35.220.252/level/test', { level: 2 }, { withCredentials: true, }
+
+            //axios.post('http://localhost:8001/level/test', { level: 2 }, { withCredentials: true, }
         )
             .then(function (response) {
                 if (response.data.result !== "이수 조건을 만족하지 못해 진행할 수 없습니다.") {
@@ -48,7 +52,7 @@ class Level extends Component {
         //document.location.href = "/level_content"
     }
     move3 = () => {
-        axios.post('http://localhost:8001/level/test', { level: 3 }, { withCredentials: true, }
+        axios.post('http://3.35.220.252/level/test', { level: 3 }, { withCredentials: true, }
         )
             .then(function (response) {
 

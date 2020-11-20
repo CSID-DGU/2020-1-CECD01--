@@ -32,7 +32,8 @@ class Code_right extends Component {
     submit = (e) => {
         var endTime = new Date().getTime();
 
-        axios.post('http://localhost:8001/problem/check', { problemNumber: cookie.load("number"), time: endTime - cookie.load("starttime"), userCode: this.state.code }, { withCredentials: true, }
+        axios.post('http://3.35.220.252/auth/logout', { problemNumber: cookie.load("number"), time: endTime - cookie.load("starttime"), userCode: this.state.code }, { withCredentials: true, }
+            //axios.post('http://localhost:8001/problem/check', { problemNumber: cookie.load("number"), time: endTime - cookie.load("starttime"), userCode: this.state.code }, { withCredentials: true, }
         )
             .then(function (response) {
                 this.setState({
