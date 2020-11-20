@@ -19,8 +19,8 @@ class Talk extends Component {
     }
 
     componentDidMount() {
-        //axios.get("http://3.35.220.252/")
-        axios.get("http://localhost:8001/talk")
+        axios.get("http://3.35.220.252/")
+            //axios.get("http://localhost:8001/talk")
             .then((resp) => {
                 console.log(resp.data.results);
                 var temp = [];

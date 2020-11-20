@@ -20,7 +20,10 @@ class Talk_ extends Component {
 
     componentDidMount() {
 
-        axios.get("http://localhost:8001/talk/detail/" + cookie.load("talk_id"), { withCredentials: true, })
+        //        
+        axios.get("http://3.35.220.252/talk/detail/" + cookie.load("talk_id"), { withCredentials: true, })
+
+            //axios.get("http://localhost:8001/talk/detail/" + cookie.load("talk_id"), { withCredentials: true, })
             .then((resp) => {
                 var c = [];
                 console.log(resp.data.results.comments[0].createdAt);
@@ -45,7 +48,10 @@ class Talk_ extends Component {
     }
 
     send = () => {
-        axios.post('http://localhost:8001/talk/comment', { boardId: cookie.load("talk_id"), content: this.state.temp }, { withCredentials: true, }
+        //3.35.220.252
+
+        axios.post('http://3.35.220.252/talk/comment', { boardId: cookie.load("talk_id"), content: this.state.temp }, { withCredentials: true, }
+            //axios.post('http://localhost:8001/talk/comment', { boardId: cookie.load("talk_id"), content: this.state.temp }, { withCredentials: true, }
         )
             .then(function (response) {
                 document.location.href = "/talk_";

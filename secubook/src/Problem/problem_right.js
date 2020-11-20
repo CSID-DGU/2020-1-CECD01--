@@ -39,7 +39,9 @@ class Problem_right extends Component {
         alert(e.target.id);
         cookie.save("number", e.target.id);
         cookie.save("starttime", new Date().getTime());
-        axios.get("http://localhost:8001/problem/" + e.target.id, { withCredentials: true, })
+
+        axios.get("http://3.35.220.252/problem/" + e.target.id, { withCredentials: true, })
+            //axios.get("http://localhost:8001/problem/" + e.target.id, { withCredentials: true, })
             .then((resp) => {
                 alert(resp.data.results.content)
 

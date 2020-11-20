@@ -24,7 +24,10 @@ class Learn_9_ extends Component {
     submit = (e) => {
         if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다." && this.state.re3 === "답이 맞았습니다.") {
             alert(1);
-            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
+
+            axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
+
+                //axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
             )
                 .then(function (response) {
                     document.location.href = "/";
