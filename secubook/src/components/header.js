@@ -9,7 +9,6 @@ import cookie from 'react-cookies';
 
 class Header extends Component {
 
-
     state = {
         response: ''
     };
@@ -22,13 +21,16 @@ class Header extends Component {
             .then((resp) => {
                 //cookie.save("user", "");
 
-                if (resp.data.user == undefined) {
+                if (resp.data.user === undefined) {
                     cookie.save("user", "")
                 }
                 else {
                     cookie.save("user", resp.data.user.name)
                 }
-                this.state.response = resp.data.user;
+                this.setState({
+                    response: resp.data.user
+                })
+                //this.state.response = resp.data.user;
             }
             ).catch((err) => {
                 console.log(err)
@@ -43,6 +45,7 @@ class Header extends Component {
                 //console.log(resp.data);
                 cookie.save("user", "")
                 document.location.href = "/";
+                this.componentDidMount();
             }
             ).catch((err) => {
                 console.log(err)
