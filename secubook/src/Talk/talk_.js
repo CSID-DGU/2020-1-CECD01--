@@ -19,14 +19,14 @@ class Talk_ extends Component {
     };
 
     componentDidMount() {
-
         //        
         //axios.get("http://3.35.220.252/talk/detail/" + cookie.load("talk_id"), { withCredentials: true, })
 
         axios.get("http://localhost:8001/talk/detail/" + cookie.load("talk_id"), { withCredentials: true, })
             .then((resp) => {
+                console.log(resp.data.results.title);
                 var c = [];
-                console.log(resp.data.results.comments[0].createdAt);
+                //console.log(resp.data.results.comments[0].createdAt);
                 for (var i = 0; i < resp.data.results.comments.length; i++) {
                     c.push({
                         id: resp.data.results.comments[i].host, content: resp.data.results.comments[i].content, createdAt: resp.data.results.comments[i].createdAt.substr(0, 10)

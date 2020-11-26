@@ -28,8 +28,18 @@ import Learn_8 from './Learn/8.js'
 import Learn_9 from './Learn/9.js'
 import Learn_10 from './Learn/10.js'
 import Learn_11 from './Learn/11.js'
-import Learn_9_ from './Learn/9_.js'
+import Learn_0_ from './Learn/0_.js'
+import Learn_1_ from './Learn/1_.js'
 import Learn_2_ from './Learn/2_.js'
+import Learn_3_ from './Learn/3_.js'
+import Learn_4_ from './Learn/4_.js'
+import Learn_5_ from './Learn/5_.js'
+import Learn_6_ from './Learn/6_.js'
+import Learn_7_ from './Learn/7_.js'
+import Learn_8_ from './Learn/8_.js'
+import Learn_9_ from './Learn/9_.js'
+import Learn_10_ from './Learn/10_.js'
+import Learn_11_ from './Learn/11_.js'
 import Write from './Talk/write.js'
 import Level1 from './Level/level1.js'
 
@@ -65,8 +75,18 @@ class App extends Component {
             <Route path="/learn_9" exact component={Learn_9} />
             <Route path="/learn_10" exact component={Learn_10} />
             <Route path="/learn_11" exact component={Learn_11} />
-            <Route path="/learn_9_" exact component={Learn_9_} />
+            <Route path="/learn_0_" exact component={Learn_0_} />
+            <Route path="/learn_1_" exact component={Learn_1_} />
             <Route path="/learn_2_" exact component={Learn_2_} />
+            <Route path="/learn_3_" exact component={Learn_3_} />
+            <Route path="/learn_4_" exact component={Learn_4_} />
+            <Route path="/learn_5_" exact component={Learn_5_} />
+            <Route path="/learn_6_" exact component={Learn_6_} />
+            <Route path="/learn_7_" exact component={Learn_7_} />
+            <Route path="/learn_8_" exact component={Learn_8_} />
+            <Route path="/learn_9_" exact component={Learn_9_} />
+            <Route path="/learn_10_" exact component={Learn_10_} />
+            <Route path="/learn_11_" exact component={Learn_11_} />
             <Route path="/write" exact component={Write} />
             <Route path="/level1" exact component={Level1} />
             <Route path="/talk_" exact component={Talk_} />

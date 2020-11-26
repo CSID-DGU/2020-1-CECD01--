@@ -6,7 +6,7 @@ import Header from '../components/header.js'
 import Arrow from '../assets/play.svg'
 import axios from 'axios';
 
-class Learn_6_ extends Component {
+class Learn_8_ extends Component {
 
     state = {
         check: 0,
@@ -22,7 +22,7 @@ class Learn_6_ extends Component {
 
             //axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
 
-            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "파라미터-조작", type: 1 }, { withCredentials: true, }
+            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "파일-업로드", type: 1 }, { withCredentials: true, }
             )
                 .then(function (response) {
                     console.log(response.data.results);
@@ -77,18 +77,18 @@ class Learn_6_ extends Component {
                     <div onClick={this.submit} className="goProblem">목록보기</div>
                     <div className="problem">
                         <div className="problem_title">
-                            1.  파라미터 변조란?
+                            1.  (      )으로 허용된 확장자만 업로드를 허용한다.의 괄호 안에 들어갈 말은?
                         </div>
                         <br></br>
                         <div id="problem0">
 
-                            <input type="checkbox" name="answer1_1" value={this.state.answer1_1} onChange={this.handleCheck} /> 서버의 중요 함수에 들어가는 인자를 조작하는 행위
+                            <input type="checkbox" name="answer1_1" value={this.state.answer1_1} onChange={this.handleCheck} /> 블랙 리스트 방식
                             <br></br>
-                            <input type="checkbox" name="answer1_2" value={this.state.answer1_2} onChange={this.handleCheck} /> Client와 Server사이에서 주고받는 값을 변조하여 사용자의 정보를 조작하는 공격 행위
+                            <input type="checkbox" name="answer1_2" value={this.state.answer1_2} onChange={this.handleCheck} /> 화이트 리스트 방식
                             <br></br>
-                            <input type="checkbox" name="answer1_3" value={this.state.answer1_3} onChange={this.handleCheck} /> Client와 Server사이에서 주고받는 파일의 경로를 조작해 다른 파일을 보는 행위
+                            <input type="checkbox" name="answer1_3" value={this.state.answer1_3} onChange={this.handleCheck} /> String 비교
                             <br></br>
-                            <input type="checkbox" name="answer1_4" value={this.state.answer1_4} onChange={this.handleCheck} /> 별도의 파라미터로 시스템 내부에 접근하는 행위
+                            <input type="checkbox" name="answer1_4" value={this.state.answer1_4} onChange={this.handleCheck} /> 암호화
 
 
                         </div>
@@ -111,4 +111,4 @@ class Learn_6_ extends Component {
 
 }
 
-export default Learn_6_;
+export default Learn_8_;

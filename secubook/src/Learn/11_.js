@@ -6,7 +6,7 @@ import Header from '../components/header.js'
 import Arrow from '../assets/play.svg'
 import axios from 'axios';
 
-class Learn_2_ extends Component {
+class Learn_11_ extends Component {
 
     state = {
         check: 0,
@@ -24,7 +24,7 @@ class Learn_2_ extends Component {
             alert(1);
             //axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
 
-            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
+            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "암호화", type: 1 }, { withCredentials: true, }
             )
                 .then(function (response) {
                     document.location.href = "/learn";
@@ -45,7 +45,7 @@ class Learn_2_ extends Component {
 
     check = (e) => {
 
-        if (this.state.answer1 === "Reflective XSS") {
+        if (this.state.answer1 === "DES") {
             this.setState({
                 re1: "답이 맞았습니다."
             });
@@ -95,7 +95,7 @@ class Learn_2_ extends Component {
 
                     <div className="problem">
                         <div className="problem_title">
-                            1. 외부 입력값을 검증없이 응답페이지 생성에 사용하는 경우 발생할 수 있는 XSS 공격 기법을 영어로 작성하시오.
+                            1. 64비트의 평문을 46비트의 암호문으로 만드는 대표적인 블록 암호 기술로서, 1975년에 당시 NBS(현재의 NIST)를 통해 발표되어 그 이후로 수많은 <br></br>시스템에 사용되어져온 알고리즘은?
                         </div>
                         <br></br>
                         <div id="problem0">
@@ -108,20 +108,18 @@ class Learn_2_ extends Component {
 
                     </div>
 
-
                     <div className="problem">
-                        <div className="problem_title">2. 설계시 고려사항에 맞지 않은 것을 고르시오
-
-</div>
+                        <div className="problem_title">2. 안전하다고 알려진 암호화 알고리즘이 아닌 것은? </div>
                         <br></br>
                         <div id="problem2">
-                            <input type="checkbox" name="answer2_1" value={this.state.answer2_1} onChange={this.handleCheck} />  입출력 값 검증 - 사용자가 입력한 값에 대한 검증과 사용자가 입력한 값을 그대로 출력할 때 검증이 필요
-<br></br>
-                            <input type="checkbox" name="answer2_2" value={this.state.answer2_2} onChange={this.handleCheck} />  XSS 방어 라이브러리 사용 - XSS 라이브러리를 사용하는 것은 프론트 단에서 개발자가 추가하는 것이다.
- <br></br>
-                            <input type="checkbox" name="answer2_3" value={this.state.answer2_3} onChange={this.handleCheck} />  웹 방화벽 사용 - 웹 방화벽은 XSS 뿐만아니라 각종 Injection 공격을 효과적으로 방어할 수 있다.
-                            <input type="checkbox" name="answer2_4" value={this.state.answer2_4} onChange={this.handleCheck} />  입출력 값 검증 - 사용자가 입력한 값에 대한 검증과 사용자가 입력한 값을 그대로 출력할 때 검증이 필요
-<br></br>
+                            <input type="checkbox" name="answer2_1" value={this.state.answer2_1} onChange={this.handleCheck} /> AES
+                            <br></br>
+                            <input type="checkbox" name="answer2_2" value={this.state.answer2_2} onChange={this.handleCheck} />  RC2
+                            <br></br>
+                            <input type="checkbox" name="answer2_3" value={this.state.answer2_3} onChange={this.handleCheck} />  SEED
+                            <br></br>
+                            <input type="checkbox" name="answer2_4" value={this.state.answer2_4} onChange={this.handleCheck} />  3DES
+                            <br></br>
                         </div>
                         <div className="error">
                             {this.state.re2}
@@ -139,4 +137,4 @@ class Learn_2_ extends Component {
 
 }
 
-export default Learn_2_;
+export default Learn_11_;

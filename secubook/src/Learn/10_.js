@@ -6,7 +6,7 @@ import Header from '../components/header.js'
 import Arrow from '../assets/play.svg'
 import axios from 'axios';
 
-class Learn_9_ extends Component {
+class Learn_10_ extends Component {
 
     state = {
         check: 0,
@@ -16,8 +16,10 @@ class Learn_9_ extends Component {
         answer1_1: false,
         answer1_2: false,
         answer1_3: false,
-        answer1_4: false,
         answer2: '',
+        answer3_1: false,
+        answer3_2: false,
+        answer3_3: false,
     };
 
     submit = (e) => {
@@ -25,7 +27,7 @@ class Learn_9_ extends Component {
 
             //axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
 
-            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "SQL-INJECTION", type: 1 }, { withCredentials: true, }
+            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "크로스-사이트-스크립팅", type: 1 }, { withCredentials: true, }
             )
                 .then(function (response) {
                     document.location.href = "/";
@@ -44,7 +46,7 @@ class Learn_9_ extends Component {
 
     check = (e) => {
 
-        if (this.state.answer1_1 === true && this.state.answer1_3 === true && this.state.answer1_2 === false && this.state.answer1_4 === false) {
+        if (this.state.answer1_1 === true && this.state.answer1_2 === false && this.state.answer1_3 === false) {
             this.setState({
                 re1: "답이 맞았습니다."
             });
@@ -55,7 +57,7 @@ class Learn_9_ extends Component {
             });
         }
 
-        if (this.state.answer2 === "request.getParameter()") {
+        if (this.state.answer2 === "게시판") {
             this.setState({
                 re2: "답이 맞았습니다."
             });
@@ -66,7 +68,19 @@ class Learn_9_ extends Component {
             });
         }
 
-        if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다.") {
+        if (this.state.answer3_2 === true && this.state.answer3_1 === false ** this.state.answer3_3 === false) {
+            this.setState({
+                re3: "답이 맞았습니다."
+            });
+        }
+        else {
+
+            this.setState({
+                re3: "답이 틀렸습니다."
+            });
+        }
+
+        if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다." && this.state.re3 === "답이 맞았습니다.") {
 
             this.setState({ check: 1 });
         }
@@ -89,24 +103,17 @@ class Learn_9_ extends Component {
             <div>
                 <Header />
                 <div className="connection-wrap-content">
-
-                    <div onClick={this.submit} className="goProblem">목록보기</div>
                     <div className="problem">
                         <div className="problem_title">
-                            1. SQL injection 예방을 위한 행동을 모두 고르시오.
+                            1. 해커가 웹 애플리케이션에서 XSS 취약점이 있는 곳을 파악하고, 악성스크립트를 삽입해 해당 스크립트가 데이터베이스에 저장되는 XSS 공격 방법은?
                         </div>
                         <br></br>
                         <div id="problem0">
 
-                            <input type="checkbox" name="answer1_1" value={this.state.answer1_1} onChange={this.handleCheck} /> PreparedStatement 라이브러리 및 setXXX() 사용
-
+                            <input type="checkbox" name="answer1_1" value={this.state.answer1_1} onChange={this.handleCheck} /> Persistent(or Stored) XSS
                             <br></br>
-                            <input type="checkbox" name="answer1_2" value={this.state.answer1_2} onChange={this.handleCheck} /> Statement 라이브러리 사용
- <br></br>
-                            <input type="checkbox" name="answer1_3" value={this.state.answer1_3} onChange={this.handleCheck} />불필요한 문자 필터링
-                            <br></br>
-                            <input type="checkbox" name="answer1_4" value={this.state.answer1_4} onChange={this.handleCheck} />검증된 사용자에게 온 입력값 바로 사용
-
+                            <input type="checkbox" name="answer1_2" value={this.state.answer1_2} onChange={this.handleCheck} /> Reflected XSS <br></br>
+                            <input type="checkbox" name="answer1_3" value={this.state.answer1_3} onChange={this.handleCheck} />DOM based XSS
 
                         </div>
                         <div className="error">
@@ -116,19 +123,7 @@ class Learn_9_ extends Component {
                     </div>
 
                     <div className="problem">
-                        <div className="problem_title">2. 다음 코드에서 취약한 부분에 해당하는 함수를 찾으시오. 단, 매개변수를 생략하시오. </div>
-                        <br></br>
-                        String accountBalanceQuery = <br></br>
-  "SELECT accountNumber, balance FROM accounts WHERE account_owner_id = "
-  + request.getParameter("user_id");<br></br>
-
-try {"{"}<br></br>
-    Statement statement = connection.createStatement();<br></br>
-    ResultSet rs = statement.executeQuery(accountBalanceQuery);<br></br>
-    while (rs.next()) {"{"}<br></br>
-        page.addTableRow(rs.getInt("accountNumber"), rs.getFloat("balance"));
-    {"}"}<br></br>
-                        {"}"}<br></br> catch (SQLException e) {"{"} ... {"}"}<br></br>
+                        <div className="problem_title">2. XSS 공격이 가장 많이 발생하는 곳은?</div>
                         <br></br>
                         <div>
                             <input id="answer2" name="answer2" value={this.state.answer2} onChange={this.handleChange} type="text" /><br></br>
@@ -138,9 +133,25 @@ try {"{"}<br></br>
                         </div>
                     </div>
 
+                    <div className="problem">
+                        <div className="problem_title">3. XSS 공격을 대응하기 위한 방안 중 틀리게 짝지어진 것은?
+</div>
+                        <br></br>
+                        <div id="problem2">
+                            <input type="checkbox" name="answer3_1" value={this.state.answer3_1} onChange={this.handleCheck} />  입출력 값 검증 - 사용자가 입력한 값에 대한 검증과 사용자가 입력한 값을 그대로 출력할 때 검증이 필요
+<br></br>
+                            <input type="checkbox" name="answer3_2" value={this.state.answer3_2} onChange={this.handleCheck} />  XSS 방어 라이브러리 사용 - XSS 라이브러리를 사용하는 것은 프론트 단에서 개발자가 추가하는 것이다.
+ <br></br>
+                            <input type="checkbox" name="answer3_3" value={this.state.answer3_3} onChange={this.handleCheck} />  웹 방화벽 사용 - 웹 방화벽은 XSS 뿐만아니라 각종 Injection 공격을 효과적으로 방어할 수 있다.
+
+                        </div>
+                        <div className="error">
+                            {this.state.re3}
+                        </div>
+                    </div>
+
 
                     {(this.state.check == 0) ? (<button className="problem_button" onClick={this.check}>채점하기</button>) : <button className="problem_button" onClick={this.submit}>제출하기</button>}
-
 
                 </div>
 
@@ -151,4 +162,4 @@ try {"{"}<br></br>
 
 }
 
-export default Learn_9_;
+export default Learn_10_;

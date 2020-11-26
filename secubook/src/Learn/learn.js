@@ -57,25 +57,25 @@ class Learn extends Component {
         else if (this.state.id === 'HTTP-프로토콜-유효성-검증') {
             document.location.href = "/learn_4"
         }
-        else if (this.state.id === '업로드,-다운로드-파일-검증') {
+        else if (this.state.id === '업로드/다운로드-파일-검증') {
             document.location.href = "/learn_5"
         }
-        else if (this.state.id === 'SQL-INJECTION') {
+        else if (this.state.id === '파라미터-조작') {
             document.location.href = "/learn_6"
         }
-        else if (this.state.id === '취약한-인증') {
+        else if (this.state.id === '명령어-삽입') {
             document.location.href = "/learn_7"
         }
-        else if (this.state.id === '크로스-사이트-스크립팅') {
+        else if (this.state.id === '파일-업로드') {
+            document.location.href = "/learn_8"
+        }
+        else if (this.state.id === 'SQL-INJECTION') {
             document.location.href = "/learn_9"
         }
-        else if (this.state.id === '취약한-접근-제어') {
+        else if (this.state.id === '크로스-사이트-스크립팅') {
             document.location.href = "/learn_10"
         }
-        else if (this.state.id === '보안-설정-오류') {
-            document.location.href = "/learn_10"
-        }
-        else if (this.state.id === '민감-데이터-노출') {
+        else if (this.state.id === '암호화') {
             document.location.href = "/learn_11"
         }
 

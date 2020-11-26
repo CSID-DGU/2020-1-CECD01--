@@ -6,28 +6,31 @@ import Header from '../components/header.js'
 import Arrow from '../assets/play.svg'
 import axios from 'axios';
 
-class Learn_2_ extends Component {
+class Learn_0_ extends Component {
 
     state = {
         check: 0,
         re1: '',
         re2: '',
-        answer1: '',
+        answer1_1: false,
+        answer1_2: false,
+        answer1_3: false,
         answer2_1: false,
         answer2_2: false,
         answer2_3: false,
-        answer2_4: false,
     };
 
     submit = (e) => {
+
         if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다.") {
-            alert(1);
+
             //axios.post('http://3.35.220.252/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
 
-            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "웹-서비스-요청-및-결과-검증", type: 0 }, { withCredentials: true, }
+            axios.post('http://localhost:8001/learn/check', { userAnswer: "", title: "DBMS-조회-및-결과-검증", type: 0 }, { withCredentials: true, }
             )
                 .then(function (response) {
-                    document.location.href = "/learn";
+                    console.log(response.data.results);
+                    document.location.href = "/";
                 })
                 .catch(error => {
                     console.log('error : ', error.response)
@@ -35,28 +38,26 @@ class Learn_2_ extends Component {
                     //document.location.href = "/login";
                 });
 
-
-
         }
-        else {
-            document.location.href = "/";
-        }
+
     }
 
     check = (e) => {
 
-        if (this.state.answer1 === "Reflective XSS") {
+        if (this.state.answer1_1 === true && this.state.answer1_2 === true && this.state.answer1_3 === true) {
             this.setState({
                 re1: "답이 맞았습니다."
             });
         }
         else {
+
             this.setState({
                 re1: "답이 틀렸습니다."
             });
         }
 
-        if (this.state.answer2_2 === true && this.state.answer2_1 === false && this.state.answer2_3 === false && this.state.answer2_4 === false) {
+
+        if (this.state.answer2_2 === true && this.state.answer2_1 === false && this.state.answer2_3 === false) {
             this.setState({
                 re2: "답이 맞았습니다."
             });
@@ -68,6 +69,8 @@ class Learn_2_ extends Component {
             });
         }
 
+
+
         if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다.") {
 
             this.setState({ check: 1 });
@@ -75,7 +78,6 @@ class Learn_2_ extends Component {
         else {
             this.setState({ check: 0 });
         }
-
 
     }
 
@@ -94,40 +96,37 @@ class Learn_2_ extends Component {
                 <div className="connection-wrap-content">
 
                     <div className="problem">
-                        <div className="problem_title">
-                            1. 외부 입력값을 검증없이 응답페이지 생성에 사용하는 경우 발생할 수 있는 XSS 공격 기법을 영어로 작성하시오.
-                        </div>
+                        <div className="problem_title">1. 입력값에 대한 검증으로 할 수 있는 방법을 모두 고르시오. </div>
                         <br></br>
-                        <div id="problem0">
-                            <input id="answer1" name="answer1" value={this.state.answer1} onChange={this.handleChange} type="text" /><br></br>
-
+                        <div id="problem1">
+                            <input type="checkbox" name="answer1_1" value={this.state.answer1_1} onChange={this.handleCheck} />  필터
+                            <br></br>
+                            <input type="checkbox" name="answer1_2" value={this.state.answer1_2} onChange={this.handleCheck} />  인터셉트
+                            <br></br>
+                            <input type="checkbox" name="answer1_3" value={this.state.answer1_3} onChange={this.handleCheck} />  라이브러리
+                            <br></br>
                         </div>
                         <div className="error">
                             {this.state.re1}
                         </div>
-
                     </div>
 
 
                     <div className="problem">
-                        <div className="problem_title">2. 설계시 고려사항에 맞지 않은 것을 고르시오
-
-</div>
+                        <div className="problem_title">2. 쿼리문을 동적으로 생성하지 않고 싶을 때 사용하는 것을 고르시오. </div>
                         <br></br>
                         <div id="problem2">
-                            <input type="checkbox" name="answer2_1" value={this.state.answer2_1} onChange={this.handleCheck} />  입출력 값 검증 - 사용자가 입력한 값에 대한 검증과 사용자가 입력한 값을 그대로 출력할 때 검증이 필요
-<br></br>
-                            <input type="checkbox" name="answer2_2" value={this.state.answer2_2} onChange={this.handleCheck} />  XSS 방어 라이브러리 사용 - XSS 라이브러리를 사용하는 것은 프론트 단에서 개발자가 추가하는 것이다.
- <br></br>
-                            <input type="checkbox" name="answer2_3" value={this.state.answer2_3} onChange={this.handleCheck} />  웹 방화벽 사용 - 웹 방화벽은 XSS 뿐만아니라 각종 Injection 공격을 효과적으로 방어할 수 있다.
-                            <input type="checkbox" name="answer2_4" value={this.state.answer2_4} onChange={this.handleCheck} />  입출력 값 검증 - 사용자가 입력한 값에 대한 검증과 사용자가 입력한 값을 그대로 출력할 때 검증이 필요
-<br></br>
+                            <input type="checkbox" name="answer2_1" value={this.state.answer2_1} onChange={this.handleCheck} />  Statement
+                            <br></br>
+                            <input type="checkbox" name="answer2_2" value={this.state.answer2_2} onChange={this.handleCheck} />  PreparedStatement
+                            <br></br>
+                            <input type="checkbox" name="answer2_3" value={this.state.answer2_3} onChange={this.handleCheck} />  getParameter()
+                            <br></br>
                         </div>
                         <div className="error">
                             {this.state.re2}
                         </div>
                     </div>
-
                     {(this.state.check == 0) ? (<button className="problem_button" onClick={this.check}>채점하기</button>) : <button className="problem_button" onClick={this.submit}>제출하기</button>}
 
                 </div>
@@ -139,4 +138,4 @@ class Learn_2_ extends Component {
 
 }
 
-export default Learn_2_;
+export default Learn_0_;
