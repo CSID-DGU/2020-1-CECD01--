@@ -42,6 +42,8 @@ import Learn_10_ from './Learn/10_.js'
 import Learn_11_ from './Learn/11_.js'
 import Write from './Talk/write.js'
 import Level1 from './Level/level1.js'
+import Level2 from './Level/level2.js'
+import Level3 from './Level/level3.js'
 
 class App extends Component {
 
@@ -89,6 +91,8 @@ class App extends Component {
             <Route path="/learn_11_" exact component={Learn_11_} />
             <Route path="/write" exact component={Write} />
             <Route path="/level1" exact component={Level1} />
+            <Route path="/level2" exact component={Level2} />
+            <Route path="/level3" exact component={Level3} />
             <Route path="/talk_" exact component={Talk_} />
           </Switch>
         </Router>

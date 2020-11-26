@@ -8,6 +8,8 @@ class Level_1 extends Component {
 
 
     state = {
+
+        check: 0,
         re1: '',
         re2: '',
         re3: '',
@@ -109,6 +111,15 @@ class Level_1 extends Component {
                 re5: "답이 틀렸습니다."
             });
         }
+
+        if (this.state.re1 === "답이 맞았습니다." && this.state.re2 === "답이 맞았습니다." && this.state.re3 === "답이 맞았습니다." && this.state.re4 === "답이 맞았습니다." && this.state.re5 === "답이 맞았습니다.") {
+
+            this.setState({ check: 1 });
+        }
+        else {
+            this.setState({ check: 0 });
+        }
+
     }
 
     handleCheck = (e) => {
@@ -125,7 +136,6 @@ class Level_1 extends Component {
             <div>
                 <Header />
                 <div className="connection-wrap">
-                    <div onClick={this.submit} className="goProblem">목록보기</div>
 
                     <div className="problem">
                         <div className="problem_title">
@@ -207,7 +217,7 @@ class Level_1 extends Component {
                             {this.state.re5}
                         </div>
                     </div>
-                    <button className="problem_button" onClick={this.check}>제출하기</button>
+                    {(this.state.check == 0) ? (<button className="problem_button" onClick={this.check}>채점하기</button>) : <button className="problem_button" onClick={this.submit}>제출하기</button>}
 
 
                 </div>
