@@ -38,7 +38,6 @@ class Header extends Component {
     }
 
     logout = (e) => {
-        alert(1);
         //axios.get("http://3.35.220.252/auth/logout", { withCredentials: true, })
         axios.get("http://localhost:8001/auth/logout", { withCredentials: true, })
             .then((resp) => {
