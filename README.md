@@ -25,11 +25,11 @@
 ## Screens
 
 #### 교육 자료
-![그림1](https://user-images.githubusercontent.com/37260938/102711985-13bb4380-4301-11eb-91c7-591260dcb874.png)
+![그림1](https://user-images.githubusercontent.com/37260938/102711985-13bb4380-4301-11eb-91c7-591260dcb874.png)
 
 
 #### 실습 환경
-![그림2](https://user-images.githubusercontent.com/37260938/102711987-1c137e80-4301-11eb-8c35-ec32db2a89fe.png)
+![그림2](https://user-images.githubusercontent.com/37260938/102711987-1c137e80-4301-11eb-8c35-ec32db2a89fe.png)
 
 
 ## 시스템 구성도
@@ -46,10 +46,19 @@
 * Docker
 * AWS EC2
 * AWS RDS
+* VSCode
+* Javascript
+* Node.js
+* MYSQL
 
 
 ## 사용된 라이브러리
 - Monaco-editor
+- Express
+- Sequelize
+- Passport
+- ShellJS
+- PM2
 
 
 ## 서버 설치 가이드(Mac PC 기준)
